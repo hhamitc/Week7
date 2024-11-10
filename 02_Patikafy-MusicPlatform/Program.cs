@@ -120,6 +120,18 @@ public class Program
         Console.WriteLine(new string('-', 33));
 
 
+        Console.WriteLine("\n\n");
+        Console.WriteLine(new string('-', 33));
+
+        var oldestReleseSinger = singers.OrderBy(s => s.ReleaseYear).First();
+        //var oldestReleseSinger = (from singer in singers
+        //                          orderby singer.ReleaseYear
+        //                          select singer).First();
+        Console.WriteLine("En Eski çıkış yapan:");
+        Console.WriteLine($"Adı: {oldestReleseSinger.SingerNameSurname}, \nÇıkış Yılı: {oldestReleseSinger.ReleaseYear}");
+        Console.WriteLine(new string('-', 33));
+
+
 
         Console.ReadKey();
     }
