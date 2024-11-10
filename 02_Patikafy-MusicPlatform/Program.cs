@@ -23,15 +23,15 @@ public class Program
 
 
 
-        //var NameStartsWithS = singers.Where(s => s.SingerNameSurname.StartsWith("S"));
-        var NameStartsWithS = from singer in singers
+        //var nameStartsWithS = singers.Where(s => s.SingerNameSurname.StartsWith("S"));
+        var nameStartsWithS = from singer in singers
                               where singer.SingerNameSurname.StartsWith("S")
                               select singer;
 
         Console.WriteLine("{0,-25}: ", "Adı S ile başlayanlar");
         Console.WriteLine(new string('-', 33));
 
-        foreach (var item in NameStartsWithS)
+        foreach (var item in nameStartsWithS)
         {
             Console.WriteLine("{0, -20}: ", string.Join(", ", item.SingerNameSurname, item.Genre, item.ReleaseYear, item.AlbumSales));
         }
@@ -44,15 +44,15 @@ public class Program
         Console.WriteLine(new string('-', 33));
 
 
-        //var Over10MSales = singers.Where(s => s.AlbumSales > 10000000);
-        var Over10MSales = from singer in singers
+        //var over10MSales = singers.Where(s => s.AlbumSales > 10000000);
+        var over10MSales = from singer in singers
                            where singer.AlbumSales > 10000000
                            select singer;
 
         Console.WriteLine("{0,-25}: ", "10 M Üzeri Satanlar");
         Console.WriteLine(new string('-', 33));
 
-        foreach (var item in Over10MSales)
+        foreach (var item in over10MSales)
         {
             Console.WriteLine("{0, -20}: ", string.Join(", ", item.SingerNameSurname, item.Genre, item.ReleaseYear, item.AlbumSales));
         }
@@ -65,13 +65,13 @@ public class Program
 
 
 
-        //var Before2000Pop = from singer in singers
+        //var before2000Pop = from singer in singers
         //                    where singer.ReleaseYear < 2000 && singer.Genre.Contains("Pop")
         //                    orderby singer.SingerNameSurname ascending
         //                    group singer by singer.ReleaseYear into groupedByYear
         //                    orderby groupedByYear.Key
         //                    select groupedByYear;
-        var Before2000Pop = singers.Where(s => s.ReleaseYear < 2000 && s.Genre.Contains("Pop"))
+        var before2000Pop = singers.Where(s => s.ReleaseYear < 2000 && s.Genre.Contains("Pop"))
                                   .OrderBy(s => s.SingerNameSurname)
                                   .GroupBy(s => s.ReleaseYear)
                                   .OrderBy(g => g.Key);
@@ -80,7 +80,7 @@ public class Program
         Console.WriteLine("2000 Öncesi Yıla Göre Gruplu - Sıralı");
         Console.WriteLine(new string('-', 33));
 
-        foreach (var item in Before2000Pop)
+        foreach (var item in before2000Pop)
         {
             Console.WriteLine($"Çıkış Yılı: {item.Key}"); // Çıkış yılına göre grup başlığı
 
@@ -98,25 +98,25 @@ public class Program
 
 
 
-        //var BestSellerSinger = singers.OrderByDescending(s=>s.AlbumSales).First();
-        var BestSellerSinger = (from singer in singers
+        //var bestSellerSinger = singers.OrderByDescending(s=>s.AlbumSales).First();
+        var bestSellerSinger = (from singer in singers
                                 orderby singer.AlbumSales descending
                                 select singer).First();
 
         Console.WriteLine("En çok albüm satan:");
-        Console.WriteLine($"Adı: {BestSellerSinger.SingerNameSurname}, \nSatış Adedi: {BestSellerSinger.AlbumSales}");
+        Console.WriteLine($"Adı: {bestSellerSinger.SingerNameSurname}, \nSatış Adedi: {bestSellerSinger.AlbumSales}");
         Console.WriteLine(new string('-', 33));
 
 
         Console.WriteLine("\n\n");
         Console.WriteLine(new string('-', 33));
 
-        //var LatestReleseSinger = singers.OrderByDescending(s => s.ReleaseYear).First();
-        var LatestReleseSinger = (from singer in singers
+        //var latestReleseSinger = singers.OrderByDescending(s => s.ReleaseYear).First();
+        var latestReleseSinger = (from singer in singers
                                   orderby singer.ReleaseYear descending
                                   select singer).First();
         Console.WriteLine("En yeni çıkış yapan:");
-        Console.WriteLine($"Adı: {LatestReleseSinger.SingerNameSurname}, \nÇıkış Yılı: {LatestReleseSinger.ReleaseYear}");
+        Console.WriteLine($"Adı: {latestReleseSinger.SingerNameSurname}, \nÇıkış Yılı: {latestReleseSinger.ReleaseYear}");
         Console.WriteLine(new string('-', 33));
 
 
