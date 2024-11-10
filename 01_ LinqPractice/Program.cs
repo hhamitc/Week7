@@ -3,7 +3,7 @@
     private static void Main(string[] args)
     {
         // Liste oluşturma
-        List<int> NumberList = new List<int>();
+        List<int> numberList = new List<int>();
 
         //Rasthele sayı oluşturmak için Random sınıfından üretme
         Random random = new Random();
@@ -13,11 +13,11 @@
         for (int i = 0; i < 10; i++)
         {
             int number = random.Next(-25, 26);
-            NumberList.Add(number);
+            numberList.Add(number);
         }
         //Üretilen listeyi yazdırma.
         Console.Write("{0,-20}: ", "Tam Liste");
-        foreach (var item in NumberList)
+        foreach (var item in numberList)
         {
             Console.Write(item + " ");
         }
@@ -26,7 +26,7 @@
 
 
         //Üretilen listeden çift sayıları filtreleme 
-        var EvenNumbers = NumberList.Where(num => num % 2 == 0);
+        var EvenNumbers = numberList.Where(num => num % 2 == 0);
         //Filtrelenen sayıları yazdırma.
         Console.Write("{0,-20}: ", "Çift Sayılar");
         foreach (var item in EvenNumbers)
@@ -38,7 +38,7 @@
 
 
         // ÜRetilen tek sayıları yazdırma
-        var OddNumbers = NumberList.Where(num => num % 2 != 0);
+        var OddNumbers = numberList.Where(num => num % 2 != 0);
         //Filtrelenen sayıları yazdırma.
         Console.Write("{0,-20}: ", "Tek Sayılar");
         foreach (var item in OddNumbers)
@@ -50,7 +50,7 @@
 
 
         //Negatif Sayıları Filtreleme
-        var NegativeNumbers = from number in NumberList
+        var NegativeNumbers = from number in numberList
                               where number < 0
                               select number;
         //Filtrelenen numaraları yazdırma.
@@ -64,7 +64,7 @@
 
 
         //Pozitif Sayıları Filtreleme
-        var PositiveNumbers = NumberList.Where(num => num > 0);
+        var PositiveNumbers = numberList.Where(num => num > 0);
         //Filtrelenen Sayıları Yazdırma
         Console.Write("{0,-20}: ", "Pozitif Sayılar");
         foreach (var item in PositiveNumbers)
@@ -76,7 +76,7 @@
 
 
         // 15'den büyük ve 22 den küçük sayıları filtreleme
-        var SelectedAreaNumbers = NumberList.Where(num => num > 15 && num < 22);
+        var SelectedAreaNumbers = numberList.Where(num => num > 15 && num < 22);
         //Filtrelenen Sayıları Yazdırma
         Console.Write("{0,-20}: ", "15-22 Arasındakiler");
         foreach (var item in SelectedAreaNumbers)
@@ -88,7 +88,7 @@
 
 
         //Listedeki her elemanın karesini alıp yeni liste oluşturma
-        var SquaredNumbers = NumberList.Select(num => num * num).ToList();
+        var SquaredNumbers = numberList.Select(num => num * num).ToList();
 
         //Yeni Listeyi yazdırma;
         Console.Write("{0,-20}: ", "Sayıların Kareleri:");
