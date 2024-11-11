@@ -105,9 +105,5 @@ Kitap Adı: Beyoğlu Rapsodisi, --> Yazar Adı: Ahmet Ümit
 Kitap Adı: İçimizdeki Şeytan, --> Yazar Adı: Sabahattin Ali
 ```
 
-## Notlar
-
-- Projede kullanılan LINQ sorgusu, farklı filtreleme ve sıralama işlemleriyle geliştirilebilir.
-- Örnek veri üzerinde çalışarak farklı kombinasyonlar ve sorgu senaryoları da test edilebilir.
 
 ---
