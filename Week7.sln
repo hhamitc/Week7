@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_ LinqPractice", "01_ Lin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Patikafy-MusicPlatform", "02_Patikafy-MusicPlatform\02_Patikafy-MusicPlatform.csproj", "{B75EFB0E-C944-4383-9D84-0E8B40D37E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Patikaflix-ShowPlatform", "03_Patikaflix-ShowPlatform\03_Patikaflix-ShowPlatform.csproj", "{A48BEB3B-6A52-46E5-8729-967D3BD81C3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Patikaflix-ShowPlatform", "03_Patikaflix-ShowPlatform\03_Patikaflix-ShowPlatform.csproj", "{A48BEB3B-6A52-46E5-8729-967D3BD81C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Practice-Linq-Join", "04_Practice-Linq-Join\04_Practice-Linq-Join.csproj", "{DB48DC62-F060-41DE-84BC-BFC370EA61C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A48BEB3B-6A52-46E5-8729-967D3BD81C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A48BEB3B-6A52-46E5-8729-967D3BD81C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A48BEB3B-6A52-46E5-8729-967D3BD81C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB48DC62-F060-41DE-84BC-BFC370EA61C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB48DC62-F060-41DE-84BC-BFC370EA61C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB48DC62-F060-41DE-84BC-BFC370EA61C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB48DC62-F060-41DE-84BC-BFC370EA61C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
